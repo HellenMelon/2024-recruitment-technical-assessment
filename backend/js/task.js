@@ -18,6 +18,10 @@ function leafFiles(files) {
         }
     }
 
+    // const leafFiles = files.filter(file => !files.some(file => file.parent === file.id))
+
+    // console.log(leafFiles) 
+
     return leafFiles;
 }
 
@@ -25,6 +29,10 @@ function leafFiles(files) {
  * Task 1
  */
 function kLargestCategories(files, k) {
+
+    // go through the files and find the k most occured catagories - and find the relative sizes
+    // sort them by size / alphabetical order .sort()
+
     return [];
 }
 
