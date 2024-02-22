@@ -3,7 +3,22 @@
  * Task 1
  */
 function leafFiles(files) {
-    return [];
+    const parents = [];
+    const leafFiles = [];
+
+    for (const file of files) {
+        parents.push(file.parent);
+    }
+
+    for (const file of files) {
+        const parent = parents.find(a => a == file.id);
+        
+        if (!parent) {
+            leafFiles.push(file.name)
+        }
+    }
+
+    return leafFiles;
 }
 
 /**
