@@ -20,7 +20,7 @@ function leafFiles(files) {
 }
 
 /**
- * Task 1
+ * Task 2
  */
 function kLargestCategories(files, k) {
 
@@ -60,7 +60,7 @@ function kLargestCategories(files, k) {
 }
 
 /**
- * Task 1
+ * Task 3
  */
 function largestFileSize(files) {
 
