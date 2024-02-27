@@ -10,7 +10,7 @@ function leafFiles(files) {
         const leaf = files.find(a => a.parent === file.id);
         
         if (!leaf) {
-            leafFiles.push(file.name)
+            leafFiles.push(file.name);
         }
     }
 
@@ -29,17 +29,16 @@ function kLargestCategories(files, k) {
 
     for (const file of files) {
         for (const category of file.categories) {
-            
-            const existingCategory = categories.find(a => a.name === category)
+
+            const existingCategory = categories.find(a => a.name === category);
     
             if(!existingCategory) {
                 categories.push({
                     name: category,
                     count: 1,
-                })
+                });
             } else {
                 existingCategory.count++;
-
             }
         }
     }
@@ -62,11 +61,11 @@ function kLargestCategories(files, k) {
  */
 function largestFileSize(files) {
 
-    const parents = files.filter(file => file.parent === -1)
+    const parents = files.filter(file => file.parent === -1);
 
     let max = 0;
     for (const parent of parents) {
-        const size = largestFileRecur(parent, files) + parent.size
+        const size = largestFileRecur(parent, files) + parent.size;
         
         if (size > max) {
             max = size;
@@ -77,7 +76,7 @@ function largestFileSize(files) {
 }
 
 function largestFileRecur(parent, files) {
-    const children = files.filter(file => file.parent === parent.id)
+    const children = files.filter(file => file.parent === parent.id);
 
     let totalSize = 0;
 
@@ -86,7 +85,7 @@ function largestFileRecur(parent, files) {
         totalSize += largestFileRecur(child, files);
     }
 
-    return totalSize
+    return totalSize;
 }
 
 
