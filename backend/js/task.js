@@ -6,12 +6,10 @@ function leafFiles(files) {
 
     const leafFiles = [];
 
-    const parents = files.map(file => file.parent)
-
     for (const file of files) {
-        const parent = parents.find(a => a === file.id);
+        const leaf = files.find(a => a.parent === file.id);
         
-        if (!parent) {
+        if (!leaf) {
             leafFiles.push(file.name)
         }
     }
